@@ -4,7 +4,7 @@ import { Card } from 'react-bootstrap'
 import Rating from '../components/Rating'
 const Product = ({ product }) => {
     return (
-        <Card className='my-3 p-3 rounded'>
+        <Card className='my-3 p-3 rounded' style={{display:"inline-block" , margin: "0 0 1em"}}>
             <Link to={`/product/${product._id}`}>
                 <Card.Img src={product.image} varaint='top' />
             </Link>

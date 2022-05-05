@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Image, Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import {LinkContainer} from 'react-router-bootstrap'
 import { logout } from '../actions/userActions';
 const Header = () => {
@@ -13,9 +13,12 @@ const Header = () => {
     }
     return (
         <header>
-            <Navbar bg="primary" variant="dark">
+            <Navbar bg="dark" variant="dark">
                 <Container>
-                    <Navbar.Brand as={Link} to="/">Ganpati</Navbar.Brand>
+                    <Navbar.Brand as={Link} to="/" >
+                    <Image className='img-responsive' style={{height:"5rem" } } src = "./images/logo.png"/>
+                    Ganpati
+                    </Navbar.Brand>
                     <Nav className="mr-auto">
                         {userInfo ? (
                             <NavDropdown title={userInfo.name} id='username'>

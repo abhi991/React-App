@@ -15,3 +15,7 @@ h2{
 .rating span{
   margin: 0.1rem;
 }
+img{
+  border-radius: 5px;
+  
+}
